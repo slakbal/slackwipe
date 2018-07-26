@@ -1,0 +1,41 @@
+{
+  "name": "slakkie/slackwipe",
+  "description": "Purge slack messages",
+  "license": "MIT",
+  "keywords": [
+    "slack",
+    "laravel"
+  ],
+  "authors": [
+    {
+      "name": "Leslie Price",
+      "email": "leslie.price78@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.3",
+    "illuminate/support": "~5.6",
+    "predis/predis": "^1.1",
+    "wgmv/laravel-slack-api": "dev-master"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Slakkie\\Slackwipe\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Slakkie\\Slackwipe\\Test\\": "tests"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Slakkie\\Slackwipe\\SlackwipeServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev"
+}
