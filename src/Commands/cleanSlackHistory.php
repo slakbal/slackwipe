@@ -160,7 +160,7 @@ class cleanSlackHistory extends Command
         if ($conversations->ok) {
 
             $jobs_count = 0;
-            $queueName = config('slackwipe.slack_queue_name', 'default');
+            $queueName = config('slackwipe.slack_wipe_queue', 'default');
 
             foreach ($conversations->messages as $message) {
 
