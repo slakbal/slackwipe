@@ -16,7 +16,7 @@ Please create a pull request for any changes, update or bugs. Thanks!
 You can install the package via composer:
 
 ```
-composer require slakkie/slackwipe
+composer require slakbal/slackwipe
 ```
 
 Laravel will auto-discover and register the `SlackwipeServiceProvider`, so no further setup is required.
@@ -24,7 +24,7 @@ Laravel will auto-discover and register the `SlackwipeServiceProvider`, so no fu
 After installing, you must publish the `slackwipe.php` configuration file:
 
 ```
-php artisan vendor:publish --provider="Slakkie\Slackwipe\SlackwipeServiceProvider"
+php artisan vendor:publish --provider="Slakbal\Slackwipe\SlackwipeServiceProvider"
 ```
 
 it will only publish the config file, or you can alternatively use:
@@ -91,4 +91,4 @@ Your contribution or bug fixes are welcome!
 
 Enjoy!
 
-Slakkie
+Slakbal

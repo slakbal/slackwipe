@@ -1,8 +1,8 @@
 <?php
 
-namespace Slakkie\Slackwipe\Commands;
+namespace Slakbal\Slackwipe\Commands;
 
-use Slakkie\Slackwipe\Jobs\DeleteSlackMessage;
+use Slakbal\Slackwipe\Jobs\DeleteSlackMessage;
 use Carbon\Carbon;
 use Illuminate\Console\Command;
 use Wgmv\SlackApi\Facades\SlackChannel;

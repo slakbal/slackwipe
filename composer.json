@@ -1,5 +1,5 @@
 {
-  "name": "slakkie/slackwipe",
+  "name": "slakbal/slackwipe",
   "description": "Purge slack messages",
   "license": "MIT",
   "keywords": [
@@ -22,18 +22,18 @@
   },
   "autoload": {
     "psr-4": {
-      "Slakkie\\Slackwipe\\": "src/"
+      "Slakbal\\Slackwipe\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Slakkie\\Slackwipe\\Test\\": "tests"
+      "Slakbal\\Slackwipe\\Test\\": "tests"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Slakkie\\Slackwipe\\SlackwipeServiceProvider"
+        "Slakbal\\Slackwipe\\SlackwipeServiceProvider"
       ]
     }
   },

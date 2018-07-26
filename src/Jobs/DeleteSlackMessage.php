@@ -1,6 +1,6 @@
 <?php
 
-namespace Slakkie\Slackwipe\Jobs;
+namespace Slakbal\Slackwipe\Jobs;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;

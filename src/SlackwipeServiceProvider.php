@@ -1,9 +1,9 @@
 <?php
 
-namespace Slakkie\Slackwipe;
+namespace Slakbal\Slackwipe;
 
 use Illuminate\Support\ServiceProvider;
-use Slakkie\Slackwipe\Commands\cleanSlackHistory;
+use Slakbal\Slackwipe\Commands\cleanSlackHistory;
 
 class SlackwipeServiceProvider extends ServiceProvider
 {
