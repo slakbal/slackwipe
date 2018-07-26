@@ -31,6 +31,6 @@ return [
      * If queues are activate the clean-up jobs will be queued onto the following queue tube
      * It is recommended to have a separate queue with a single worker to avoid busting the Slack API limit
      */
-    'slack_wipe_queue' => env('QUEUE_TUBE_SLACK_WIPE', 'default'),
+    'slack_wipe_queue' => env('QUEUE_TUBE_SLACK', 'default'),
 
 ];

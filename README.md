@@ -65,10 +65,10 @@ In the config file the channels and the retention period in days can be configur
 
 ### Queue
 
-Per default all jobs will be queued onto the `default` Redis queue. It is however recommended to keep things separate and have a dedicated queue (tube) for the wipe jobs with a single queue worker that would work the specific queue. In the config file you can set the name of the queue to which the jobs should be dispatched to or add the `QUEUE_TUBE_SLACK_WIPE` variable to your environment (.env) file   
+Per default all jobs will be queued onto the `default` Redis queue. It is however recommended to keep things separate and have a dedicated queue (tube) for the wipe jobs with a single queue worker that would work the specific queue. In the config file you can set the name of the queue to which the jobs should be dispatched to or add the `QUEUE_TUBE_SLACK` variable to your environment (.env) file   
 
 ```
-'slack_wipe_queue' => env('QUEUE_TUBE_SLACK_WIPE', 'default')      
+'slack_wipe_queue' => env('QUEUE_TUBE_SLACK', 'default')      
 ```
 
 ## Execution
