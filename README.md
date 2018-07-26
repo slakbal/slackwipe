@@ -87,7 +87,7 @@ You may define a scheduled task in the schedule method of the `App\Console\Kerne
 $schedule->command('slack:wipe')->everyFifteenMinutes()->between('3:00', '5:00')->withoutOverlapping();
 ```
 
-Your contribution or bug fixes are welcome!
+Your contributions (Pull Requests) or bug fixes are welcome!
 
 Enjoy!
 
