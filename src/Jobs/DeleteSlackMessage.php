@@ -9,7 +9,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Redis;
-use Wgmv\SlackApi\Facades\SlackChat;
+use Vluzrmos\SlackApi\Facades\SlackChat;
 
 class DeleteSlackMessage implements ShouldQueue
 {
@@ -57,7 +57,7 @@ class DeleteSlackMessage implements ShouldQueue
     {
         Redis::throttle('wipe')->allow(1)->every(4)->then(function () {
 
-            $response = SlackChat::delete($this->channelId, $this->message->ts, $options = []);
+            $response = SlackChat::delete($this->channelId, $this->message->ts);
 
             if ($response->ok) {
                 //Log::info('delete-slack-message:', ['action' => 'delete-slack-message-job', 'message' => 'Slack message was deleted.']);
