@@ -3,13 +3,13 @@
 namespace Slakbal\Slackwipe\Jobs;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Redis;
-use Wgmv\SlackApi\Facades\SlackChat;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Queue\InteractsWithQueue;
+use Vluzrmos\SlackApi\Facades\SlackChat;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Foundation\Bus\Dispatchable;
 
 class DeleteSlackMessage implements ShouldQueue
 {
@@ -22,7 +22,6 @@ class DeleteSlackMessage implements ShouldQueue
      */
     public $tries = 3;
 
-
     /**
      * The number of seconds the job can run before timing out.
      *
@@ -30,9 +29,7 @@ class DeleteSlackMessage implements ShouldQueue
      */
     public $timeout = 5;
 
-
     public $channelId;
-
 
     public $message;
 
@@ -47,7 +44,6 @@ class DeleteSlackMessage implements ShouldQueue
         $this->message = $message;
     }
 
-
     /**
      * Execute the job.
      *
@@ -56,19 +52,15 @@ class DeleteSlackMessage implements ShouldQueue
     public function handle()
     {
         Redis::throttle('wipe')->allow(1)->every(4)->then(function () {
-
-            $response = SlackChat::delete($this->channelId, $this->message->ts, $options = []);
+            $response = SlackChat::delete($this->channelId, $this->message->ts);
 
             if ($response->ok) {
                 //Log::info('delete-slack-message:', ['action' => 'delete-slack-message-job', 'message' => 'Slack message was deleted.']);
             } else {
                 Log::warning('delete-slack-message:', ['action' => 'delete-slack-message-job', 'message' => 'Slack message could not be deleted.', 'response' => json_encode($response)]);
             }
-
         }, function () {
-
             return $this->release(10);
-
         });
     }
 }

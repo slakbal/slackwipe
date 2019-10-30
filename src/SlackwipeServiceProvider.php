@@ -21,17 +21,17 @@ class SlackwipeServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
-                cleanSlackHistory::class
-            ]);
+                                cleanSlackHistory::class,
+                            ]);
         }
 
-        $this->publishes([__DIR__ . '/../config/slackwipe.php' => config_path('slackwipe.php')], 'config');
+        $this->publishes([__DIR__.'/../config/slackwipe.php' => config_path('slackwipe.php')], 'config');
     }
 
     public function register()
     {
         //runtime merge config
-        $this->mergeConfigFrom(__DIR__ . '/../config/slackwipe.php', 'slackwipe');
+        $this->mergeConfigFrom(__DIR__.'/../config/slackwipe.php', 'slackwipe');
     }
 
     /**
@@ -41,7 +41,7 @@ class SlackwipeServiceProvider extends ServiceProvider
     public function provides()
     {
         return [
-            cleanSlackHistory::class
+            cleanSlackHistory::class,
         ];
     }
 }

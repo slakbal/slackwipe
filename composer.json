@@ -15,8 +15,7 @@
   "require": {
     "php": ">=7.1.3",
     "illuminate/support": "~5",
-    "predis/predis": "^1.1",
-    "wgmv/laravel-slack-api": "dev-master"
+    "vluzrmos/slack-api": "^0.4.8"
   },
   "require-dev": {
   },
@@ -36,10 +35,27 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Slakbal\\Slackwipe\\SlackwipeServiceProvider"
-      ]
+        "Slakbal\\Slackwipe\\SlackwipeServiceProvider",
+        "Vluzrmos\\SlackApi\\SlackApiServiceProvider"
+      ],
+      "aliases": {
+        "SlackApi": "Vluzrmos\\SlackApi\\Facades\\SlackApi",
+        "SlackChannel": "Vluzrmos\\SlackApi\\Facades\\SlackChannel",
+        "SlackChat": "Vluzrmos\\SlackApi\\Facades\\SlackChat",
+        "SlackGroup": "Vluzrmos\\SlackApi\\Facades\\SlackGroup",
+        "SlackFile": "Vluzrmos\\SlackApi\\Facades\\SlackFile",
+        "SlackSearch": "Vluzrmos\\SlackApi\\Facades\\SlackSearch",
+        "SlackInstantMessage": "Vluzrmos\\SlackApi\\Facades\\SlackInstantMessage",
+        "SlackUser": "Vluzrmos\\SlackApi\\Facades\\SlackUser",
+        "SlackStar": "Vluzrmos\\SlackApi\\Facades\\SlackStar",
+        "SlackUserAdmin": "Vluzrmos\\SlackApi\\Facades\\SlackUserAdmin",
+        "SlackRealTimeMessage": "Vluzrmos\\SlackApi\\Facades\\SlackRealTimeMessage",
+        "SlackTeam": "Vluzrmos\\SlackApi\\Facades\\SlackTeam"
+      }
     }
   },
   "minimum-stability": "dev",
   "prefer-stable": true
 }
+
+
