@@ -29,6 +29,13 @@ class DeleteSlackMessage implements ShouldQueue
      */
     public $timeout = 5;
 
+    /**
+     * The number of seconds to wait before retrying the job.
+     *
+     * @var int
+     */
+    public $retryAfter = 30;
+
     public $channelId;
 
     public $message;
