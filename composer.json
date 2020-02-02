@@ -36,7 +36,7 @@
     "laravel": {
       "providers": [
         "Slakbal\\Slackwipe\\SlackwipeServiceProvider",
-        "Vluzrmos\\SlackApi\\SlackApiServiceProvider"
+        "Craftyx\\SlackApi\\SlackApiServiceProvider"
       ],
       "aliases": {
         "SlackApi": "Vluzrmos\\SlackApi\\Facades\\SlackApi",
