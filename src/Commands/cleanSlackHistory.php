@@ -5,8 +5,8 @@ namespace Slakbal\Slackwipe\Commands;
 use Carbon\Carbon;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Log;
-use Vluzrmos\SlackApi\Facades\SlackGroup;
-use Vluzrmos\SlackApi\Facades\SlackChannel;
+use Craftyx\SlackApi\Facades\SlackGroup;
+use Craftyx\SlackApi\Facades\SlackChannel;
 use Slakbal\Slackwipe\Jobs\DeleteSlackMessage;
 
 class cleanSlackHistory extends Command
